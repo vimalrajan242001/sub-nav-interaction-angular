@@ -1,0 +1,13 @@
+<nav>
+    <div class="logo">Vimal</div>
+    <ul class="nav-links" [ngClass]="status ? 'nav-active':' '" #list>
+        <li><a routerLink="/">Home</a></li>
+        <li><a>dummy</a></li>
+        <li><a>dummy</a></li>
+    </ul>
+    <div class="burger" (click)="clickEvent()" [ngClass]="status ? 'toggle':' '">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+</nav>
