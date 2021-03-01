@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import {Router} from '@angular/router'
 @Component({
   selector: 'app-landing-page',
@@ -6,7 +6,7 @@ import {Router} from '@angular/router'
   styleUrls: ['./landing-page.component.scss']
 })
 export class LandingPageComponent implements OnInit {
-
+@Output() fireevent = new EventEmitter()
   constructor(
     private router : Router,
   ) { }
@@ -15,6 +15,7 @@ export class LandingPageComponent implements OnInit {
   }
 handeleroute(value){
   var routevalue = value;
+  this.fireevent.emit(routevalue)
   if(routevalue === "videos"){
     this.router.navigate(["videos"])
   }

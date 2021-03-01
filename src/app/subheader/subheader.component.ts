@@ -6,9 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./subheader.component.scss']
 })
 export class SubheaderComponent implements OnInit {
-
+  public message
   constructor() { }
-
+  changestyle(value){
+    
+  }
   ngOnInit(): void {
   }
 

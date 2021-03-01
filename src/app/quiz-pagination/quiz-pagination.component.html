@@ -1,0 +1,5 @@
+<div class="d-flex justify-content-end ">
+    <span style="cursor: pointer;color: white;" *ngFor="let quiz of quizs;index as i" (click)='changequestion(i)'  class="p-2 m-2 bg-dark rounded">
+            {{quiz.ques_number}}
+    </span>
+</div>

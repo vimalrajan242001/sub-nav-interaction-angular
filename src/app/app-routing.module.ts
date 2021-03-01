@@ -1,3 +1,4 @@
+import { CreateQuizViewComponent } from './create-quiz-view/create-quiz-view.component';
 import { QuizeLandingPageComponent } from './quize-landing-page/quize-landing-page.component';
 import { DocLandingPageComponent } from './doc-landing-page/doc-landing-page.component';
 import { VideosLandingPageComponent } from './videos-landing-page/videos-landing-page.component';
@@ -9,7 +10,8 @@ const routes: Routes = [
   {path:"",component:LandingPageComponent},
   { path:"videos", component: VideosLandingPageComponent },
   { path: "docs", component: DocLandingPageComponent },
-  { path: "quize", component:QuizeLandingPageComponent  },
+  { path: "quize", component: QuizeLandingPageComponent },
+  { path: "createquiz", component:CreateQuizViewComponent  },
 ];
 
 @NgModule({

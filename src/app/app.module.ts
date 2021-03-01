@@ -1,3 +1,4 @@
+import { QuizServiceService } from './quiz-service.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -9,6 +10,10 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { VideosLandingPageComponent } from './videos-landing-page/videos-landing-page.component';
 import { QuizeLandingPageComponent } from './quize-landing-page/quize-landing-page.component';
 import { DocLandingPageComponent } from './doc-landing-page/doc-landing-page.component';
+import { CreateQuizViewComponent } from './create-quiz-view/create-quiz-view.component';
+import { QuizContainerComponent } from './quiz-container/quiz-container.component';
+import { QuizPaginationComponent } from './quiz-pagination/quiz-pagination.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,13 +23,17 @@ import { DocLandingPageComponent } from './doc-landing-page/doc-landing-page.com
     LandingPageComponent,
     VideosLandingPageComponent,
     QuizeLandingPageComponent,
-    DocLandingPageComponent
+    DocLandingPageComponent,
+    CreateQuizViewComponent,
+    QuizContainerComponent,
+    QuizPaginationComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [QuizServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
