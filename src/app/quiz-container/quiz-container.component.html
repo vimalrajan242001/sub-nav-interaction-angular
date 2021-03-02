@@ -1,11 +1,11 @@
 <app-quiz-pagination (firechangeques)='getSelectedques($event)'></app-quiz-pagination>
 <div class="p-4  bg">
     <form (submit)='addquize()'>
-    <label for="question">Question</label>
-<input type="text" name="question" class="question" [(ngModel)]="question"><br>
-    <label for="answer">Answer</label>
-<input type="text" name="answer" class="answer" [(ngModel)]="answer"><br>
-<button type="submit" *ngIf='!update_but'>add</button> <br>
-<button *ngIf='update_but' type="submit">Update</button> <br>
-</form>
+        <label for="question">Question</label>
+        <input type="text" name="question" class="question" [(ngModel)]="question"><br>
+        <label for="answer">Answer</label>
+        <input type="text" name="answer" class="answer" [(ngModel)]="answer"><br>
+        <button type="submit" *ngIf='!update_but'>add</button> <br>
+        <button *ngIf='update_but' type="submit">Update</button> <br>
+    </form>
 </div>

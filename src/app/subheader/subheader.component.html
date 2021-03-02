@@ -1,8 +1,7 @@
-<app-header (fireevent)="changestyle($event)"></app-header>
 <div class="p-3 bg-light">
-   <div class="d-flex justify-content-center">
-      <div> <a class="p-1 sub-btn mr-3" [routerLinkActive]="['is-active']" [routerLink]="['videos']"> Videos</a></div>
-      <div><a class="p-1 sub-btn mr-3" [routerLinkActive]="['is-active']" [routerLink]="['docs']">Documents</a></div>
-      <div><a class="p-1 sub-btn mr-3" [routerLinkActive]="['is-active']" [routerLink]="['quize']">Quize</a></div>
+   <div class="d-flex justify-content-center" >
+      <div> <a routerLink="videos" class="p-1 mr-3" [ngClass]="{'is-active': subheadstyle.videos === true, 'is-inactive':subheadstyle.videos === false, 'sub-btn':subheadstyle.videos === null }" > Videos</a></div>
+      <div><a routerLink="docs" class="p-1 sub-btn mr-3" [ngClass]="{'is-active': subheadstyle.docs === true, 'is-inactive':subheadstyle.docs === false, 'sub-btn':subheadstyle.docs === null }">Documents</a></div>
+      <div><a routerLink="quiz" class="p-1 sub-btn mr-3" [ngClass]="{'is-active': subheadstyle.quiz === true, 'is-inactive':subheadstyle.quiz === false, 'sub-btn':subheadstyle.quiz === null }">Quiz</a></div>
    </div>
 </div>

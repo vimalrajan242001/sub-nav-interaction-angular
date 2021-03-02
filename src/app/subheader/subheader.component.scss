@@ -11,3 +11,6 @@ a{
 .is-active{
     background-color: rgba($color: #000000, $alpha: 0.1);
 }
+.is-inactive{
+    color: rgba($color: #000000, $alpha: 0.3);
+}

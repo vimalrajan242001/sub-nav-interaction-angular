@@ -1,29 +1,30 @@
+import { Router } from '@angular/router';
+import { SubHeaderStyleService } from './../sub-header-style.service';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import {Router} from '@angular/router'
 @Component({
   selector: 'app-landing-page',
   templateUrl: './landing-page.component.html',
   styleUrls: ['./landing-page.component.scss']
 })
 export class LandingPageComponent implements OnInit {
-@Output() fireevent = new EventEmitter()
+  public sub_style;
   constructor(
-    private router : Router,
+    private route : Router,
+    private subheaderservice: SubHeaderStyleService
   ) { }
 
   ngOnInit(): void {
+    this.sub_style = this.subheaderservice.sub_style
   }
-handeleroute(value){
-  var routevalue = value;
-  this.fireevent.emit(routevalue)
-  if(routevalue === "videos"){
-    this.router.navigate(["videos"])
+  handeleroute(value) {
+    if (value === "videos") {
+      this.sub_style = { videos: true, docs: false, quiz: false }
+      this.subheaderservice.changesubheadvalues(this.sub_style)
+      this.route.navigate(["videos"])
+    }
+    else if (value === "docs") {
+    }
+    else if (value === "quiz") {
+    }
   }
-  else if(routevalue === "docs"){
-    this.router.navigate(["docs"])
-  }
-  else if(routevalue === "quize"){
-    this.router.navigate(["quize"])
-  }
-}
 }

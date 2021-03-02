@@ -1,3 +1,4 @@
+import { SubHeaderStyleService } from './sub-header-style.service';
 import { QuizServiceService } from './quiz-service.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -33,7 +34,7 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [QuizServiceService],
+  providers: [QuizServiceService,SubHeaderStyleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

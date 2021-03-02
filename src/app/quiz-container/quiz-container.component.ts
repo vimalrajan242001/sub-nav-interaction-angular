@@ -1,3 +1,4 @@
+import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { QuizServiceService } from './../quiz-service.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -12,7 +13,11 @@ export class QuizContainerComponent implements OnInit {
   public answer: String = "";
   public index: number = null;
   public update_but: Boolean = false;
-  constructor(private quizservice: QuizServiceService) { }
+  constructor(private quizservice: QuizServiceService,
+    private router: Router,
+  ) {
+
+  }
 
   ngOnInit(): void {
   }
