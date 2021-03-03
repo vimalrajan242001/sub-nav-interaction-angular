@@ -10,7 +10,7 @@ const routes: Routes = [
   {path:"",component:LandingPageComponent},
   { path:"videos", component: VideosLandingPageComponent },
   { path: "docs", component: DocLandingPageComponent },
-  { path: "quize", component: QuizeLandingPageComponent },
+  { path: "quiz", component: QuizeLandingPageComponent },
   { path: "createquiz", component:CreateQuizViewComponent  },
 ];
 

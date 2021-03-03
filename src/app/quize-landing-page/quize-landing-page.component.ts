@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 
 @Component({
   selector: 'app-quize-landing-page',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./quize-landing-page.component.scss']
 })
 export class QuizeLandingPageComponent implements OnInit {
-
+  public sub_style = { videos: false, docs: false, quiz: true }
   constructor() { }
 
   ngOnInit(): void {

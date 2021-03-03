@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-subheader',
@@ -6,11 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./subheader.component.scss']
 })
 export class SubheaderComponent implements OnInit {
-  public message
+  @Input() sub_style:{videos:boolean,docs:boolean,quiz:boolean}
   constructor() { }
-  changestyle(value){
-    
-  }
+  
   ngOnInit(): void {
   }
 

@@ -1,29 +1,23 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import {Router} from '@angular/router'
+import { SubStyleService } from './../sub-style.service';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 @Component({
   selector: 'app-landing-page',
   templateUrl: './landing-page.component.html',
   styleUrls: ['./landing-page.component.scss']
 })
 export class LandingPageComponent implements OnInit {
-@Output() fireevent = new EventEmitter()
+  @Input() sub_style = { videos: null, docs: null, quiz: null }
+  // public link_style
   constructor(
-    private router : Router,
+    // private sub_style_service: SubStyleService
   ) { }
 
   ngOnInit(): void {
+    // this.sub_style_service.sub_link_change.subscribe(value => this.link_style = value)
   }
-handeleroute(value){
-  var routevalue = value;
-  this.fireevent.emit(routevalue)
-  if(routevalue === "videos"){
-    this.router.navigate(["videos"])
-  }
-  else if(routevalue === "docs"){
-    this.router.navigate(["docs"])
-  }
-  else if(routevalue === "quize"){
-    this.router.navigate(["quize"])
-  }
-}
+  // changevalue(value) {
+  //   if (value == 'videos') {
+  //     this.sub_style_service.changesublink({ videos: true, docs: false, quiz: false })
+  //   }
+  // }
 }
